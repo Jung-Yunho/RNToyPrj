@@ -1,15 +1,16 @@
 import React from 'react'
 import {TouchableOpacity} from 'react-native'
-import {MaterialCommunityIcons} from '@expo/vector-icons'
 import PropTypes from 'prop-types'
+import { FontAwesome } from "@expo/vector-icons"
 
 export default function Button({iconName, onPress}) {
     return (
         <TouchableOpacity onPressOut={onPress}>
-            <MaterialCommunityIcons name={iconName}size={80}/>
+            <FontAwesome name={iconName} size={70} color="white"/>
         </TouchableOpacity>
     )
 }
+
 
 Button.propTypes = {
     iconName: PropTypes.string.isRequired,
